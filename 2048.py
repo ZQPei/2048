@@ -99,6 +99,7 @@ class Game(object):
         print(self.board)    
         print("you are dead")
 
+        self.convert()
         idx = np.where(self.imbase['dead'][:,:,2]>100)
         self.imout[idx] = self.imbase['dead'][idx]
         #self.imout += self.imbase['dead']
